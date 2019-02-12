@@ -571,13 +571,13 @@
 					<!--Wrapper for sliders-->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<a target="_blank" href="https://melody99621.github.io/band/"><img src="images/band.jpeg" style="width:100%;"></a>
+							<a target="_blank" href="https://melody99621.github.io/band/"><img src="images/band.JPG" style="width:100%;"></a>
 						</div>
 						<div class="item">
-							<a target="_blank" href="https://melody99621.github.io/company/"><img src="images/company.jpeg" style="width:100%;"></a>
+							<a target="_blank" href="https://melody99621.github.io/company/"><img src="images/company.JPG" style="width:100%;"></a>
 						</div>
 						<div class="item">
-							<a target="_blank" href="https://melody99621.github.io/color-games/"><img src="images/color games.jpeg" style="width:100%;"></a>
+							<a target="_blank" href="https://melody99621.github.io/color-games/"><img src="images/color games.JPG" style="width:100%;"></a>
 						</div>
 					</div>
 					<!--Left and Right controls-->
@@ -621,12 +621,12 @@
     		];
 
 			var map1 = new google.maps.Map(document.getElementById('map'), {
-          	center: {lat: 24.9543421, lng: 121.2213471},
-          	zoom: 13,
-          	mapTypeId: google.maps.MapTypeId.ROADMAP
+          		center: {lat: 24.9543421, lng: 121.2213471},
+          		zoom: 13,
+          		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
 
-        	var infowindow = new google.maps.InfoWindow();
+        	var infowindow = new google.maps.InfoWindow({});
 
     		var marker,i;
 
@@ -639,7 +639,7 @@
       			google.maps.event.addListener(marker, 'click', (function(marker, i) {
         			return function() {
           				infowindow.setContent(locations[i][0]);
-          				infowindow.open(map1, marker);
+          				infowindow.open(map, marker);
         			}
       			})
       			(marker, i));
