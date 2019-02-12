@@ -319,7 +319,7 @@
 						<option value="Pingzhen">平鎮區</option>
 						<option value="Longtan">龍潭區</option>
 						<option value="Xinwu">新屋區</option>
-						<option value="Taoyuan">Taoyuan</option>
+						<option value="Taoyuan">桃園區</option>
 					</select>
 					<input type="button" value="run" onclick="ShowValue()" style="color: black;">
 				<script>	
@@ -607,6 +607,9 @@
 	<script type="text/javascript">
 		function initMap() {
 
+				var map1,locations =[];
+
+
 
 			//Zhongli
 			if(ShowValue() == "Zhongli"){
@@ -652,7 +655,7 @@
 				lat: 24.959422,
 				long: 121.2247574
 				};
-			var locations = [
+			 locations = [
       			[j1.info, j1.lat, j1.long, 0],
       			[j2.info, j2.lat, j2.long, 1],
       			[j3.info, j3.lat, j3.long, 2],
@@ -661,7 +664,7 @@
       			[j6.info, j6.lat, j6.long, 5],
     		];
 
-			var map1 = new google.maps.Map(document.getElementById('map'), {
+			 map1 = new google.maps.Map(document.getElementById('map'), {
           		center: {lat: 24.9543421, lng: 121.2213471},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -802,7 +805,7 @@
 				lat: 25.0126948,
 				long: 121.3003931
 				};	
-			var locations = [
+			 locations = [
       			[j1.info, j1.lat, j1.long, 0],
       			[j2.info, j2.lat, j2.long, 1],
       			[j3.info, j3.lat, j3.long, 2],
@@ -824,12 +827,13 @@
       			[j19.info, j19.lat, j19.long, 5],
     		];
 
-			var map1 = new google.maps.Map(document.getElementById('map'), {
+			 map1 = new google.maps.Map(document.getElementById('map'), {
           		center: {lat: 24.9891959, lng: 121.3133347},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
         	}
+        	
         	else{
 
         	}
