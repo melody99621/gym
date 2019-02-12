@@ -601,21 +601,54 @@
 	<script type="text/javascript">
 		function initMap() {
 			var j1 = {
-				info: '<strong>中壢有家健身教室</strong><br>\
-						320桃園市中壢區中山東路三段327號<br>\
-						<a href="https://goo.gl/maps/z2x5kuWfkbw">在GOOGLE地圖上查看</a>',
-				lat: 24.9569459,
-				long: 121.231689
+				info: '<strong>極限健身中心</strong><br>\
+						320桃園市中壢區中華路二段501號<br>\
+						<a href="https://goo.gl/maps/KN49aiuhR1S2">在GOOGLE地圖上查看</a>',
+				lat: 24.9625301,
+				long: 121.2322368
 				};
-
+			var j2 = {
+				info: '<strong>一起動EZDon健身學院</strong><br>\
+						320桃園市中壢區永樂路61 號<br>\
+						<a href="https://goo.gl/maps/jW4Pp9crTRP2">在GOOGLE地圖上查看</a>',
+				lat: 24.9525486,
+				long: 121.2220002
+				};		
+			var j3 = {
+				info: '<strong>World Gym世界健身俱樂部</strong><br>\
+						320桃園市中壢區中山路136號<br>\
+						<a href="https://goo.gl/maps/C4Srzjcj4FA2">在GOOGLE地圖上查看</a>',
+				lat: 24.955941,
+				long: 121.2248722
+				};
+			var j4 = {
+				info: '<strong>TRUE FITNESS 中壢瑜珈健身館</strong><br>\
+						320桃園市中壢區中美路一段12號<br>\
+						<a href="https://goo.gl/maps/K8axQ4YnZbx">在GOOGLE地圖上查看</a>',
+				lat: 24.9596418	,
+				long: 121.2237803
+				};
+			var j5 = {
+				info: '<strong>健身工廠 Fitness Factroy</strong><br>\
+						320桃園市中壢區中華路二段330號<br>\
+						<a href="https://goo.gl/maps/z2x5kuWfkbw">在GOOGLE地圖上查看</a>',
+				lat: 24.9645594,
+				long: 121.2360574
+				};
+			var j6 = {
+				info: '<strong>All-in Fitness</strong><br>\
+						320桃園市中壢區延平路372號B1號<br>\
+						<a href="https://goo.gl/maps/BKBsUczkQNp">在GOOGLE地圖上查看</a>',
+				lat: 24.959422,
+				long: 121.2247574
+				};
 			var locations = [
-      			[j1.info, j1.lat, j1.long,0],
-      			["一起動EZDon健身學院-中壢店",24.9526974, 121.2220724, 1],
-      			['World Gym世界健身俱樂部', 24.9625973, 121.2268761, 2],
-      			['TRUE FITNESS', 24.959728, 121.223904, 3],
-      			['O-FIT原素運動空間', 24.968401, 121.230413, 4],
-      			['極限健身中心', 24.962578, 121.232380, 5],
-      			['健身工廠', 24.964572, 121.2295313, 6]
+      			[j1.info, j1.lat, j1.long, 0],
+      			[j2.info, j2.lat, j2.long, 1],
+      			[j3.info, j3.lat, j3.long, 2],
+      			[j4.info, j4.lat, j4.long, 3],
+      			[j5.info, j5.lat, j5.long, 4],
+      			[j6.info, j6.lat, j6.long, 5],
     		];
 
 			var map1 = new google.maps.Map(document.getElementById('map'), {
