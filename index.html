@@ -604,8 +604,8 @@
 		function initMap() {
 
 			var locations = [
-      			['中壢有家健身教室', 24.948595, 121.2354664,4],
-      			['一起動EZDon健身學院-中壢店',24.9526974, 121.2220724, 5],
+      			["中壢有家健身教室", 24.948595, 121.2354664,4],
+      			["一起動EZDon健身學院-中壢店",24.9526974, 121.2220724, 5],
       			['World Gym世界健身俱樂部', 24.9625973, 121.2268761, 3],
       			['TRUE FITNESS', 24.959728, 121.223904, 2],
       			['O-FIT原素運動空間', 24.968401, 121.230413, 1],
@@ -614,15 +614,14 @@
     		];
 
 			var map1 = new google.maps.Map(document.getElementById('map'), {
-          	center: {lat: 24.9767793, lng: 121.1741703},
-          	zoom: 9,
+          	center: {lat: 24.9543421, lng: 121.2213471},
+          	zoom: 13,
           	mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
 
         	var infowindow = new google.maps.InfoWindow();
 
     		var marker,i;
-
 
     		for (i = 0; i < locations.length; i++) {  
       			marker = new google.maps.Marker({
@@ -633,7 +632,7 @@
       			google.maps.event.addListener(marker, 'click', (function(marker, i) {
         			return function() {
           				infowindow.setContent(locations[i][0]);
-          				infowindow.open(map, marker);
+          				infowindow.open(map1, marker);
         			}
       			})
       			(marker, i));
