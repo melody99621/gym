@@ -314,14 +314,20 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<select name="subs" id="#search" style="width:100px;">
-						<option value="中壢區">中壢區</option>
-						<option value="平鎮區">平鎮區</option>
-						<option value="龍潭區">龍潭區</option>
-						<option value="新屋區">新屋區</option>
-						<option value="桃園區">桃園區</option>
+					<select name="subs" id="search" style="width:100px;color: black;">
+						<option value="Zhongli">中壢區</option>
+						<option value="Pingzhen">平鎮區</option>
+						<option value="Longtan">龍潭區</option>
+						<option value="Xinwu">新屋區</option>
+						<option value="Taoyuan">Taoyuan</option>
 					</select>
-					<input type="button" value="run" onclick="ShowValue()">
+					<input type="button" value="run" onclick="ShowValue()" style="color: black;">
+				<script>	
+					function ShowValue(){
+					var district = document.getElementById("search").value;
+					return district;
+					}
+				</script>
 				</div>
 			</div>
 			<div class="row" style="margin-bottom: 30px;">
@@ -329,7 +335,7 @@
 					<div id="map" style="width:100%;height:460px"></div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 	<!--coach-->
 	<div class="gym-coach text-center" id="gym coach">
@@ -600,45 +606,49 @@
 
 	<script type="text/javascript">
 		function initMap() {
+
+
+			//Zhongli
+			if(ShowValue() == "Zhongli"){
 			var j1 = {
 				info: '<strong>極限健身中心</strong><br>\
 						320桃園市中壢區中華路二段501號<br>\
-						<a href="https://goo.gl/maps/KN49aiuhR1S2">在GOOGLE地圖上查看</a>',
+						<a target="_blank" href="https://goo.gl/maps/KN49aiuhR1S2">在GOOGLE地圖上查看</a>',
 				lat: 24.9625301,
 				long: 121.2322368
 				};
 			var j2 = {
-				info: '<strong>一起動EZDon健身學院</strong><br>\
+				info: '<strong>一起動EZDon健身學院-中壢店</strong><br>\
 						320桃園市中壢區永樂路61 號<br>\
-						<a href="https://goo.gl/maps/jW4Pp9crTRP2">在GOOGLE地圖上查看</a>',
+						<a target="_blank" href="https://goo.gl/maps/jW4Pp9crTRP2">在GOOGLE地圖上查看</a>',
 				lat: 24.9525486,
 				long: 121.2220002
 				};		
 			var j3 = {
-				info: '<strong>World Gym世界健身俱樂部</strong><br>\
+				info: '<strong>World Gym世界健身俱樂部中壢中山店</strong><br>\
 						320桃園市中壢區中山路136號<br>\
-						<a href="https://goo.gl/maps/C4Srzjcj4FA2">在GOOGLE地圖上查看</a>',
+						<a target="_blank" href="https://goo.gl/maps/C4Srzjcj4FA2">在GOOGLE地圖上查看</a>',
 				lat: 24.955941,
 				long: 121.2248722
 				};
 			var j4 = {
 				info: '<strong>TRUE FITNESS 中壢瑜珈健身館</strong><br>\
 						320桃園市中壢區中美路一段12號<br>\
-						<a href="https://goo.gl/maps/K8axQ4YnZbx">在GOOGLE地圖上查看</a>',
+						<a target="_blank" href="https://goo.gl/maps/K8axQ4YnZbx">在GOOGLE地圖上查看</a>',
 				lat: 24.9596418	,
 				long: 121.2237803
 				};
 			var j5 = {
 				info: '<strong>健身工廠 Fitness Factroy</strong><br>\
 						320桃園市中壢區中華路二段330號<br>\
-						<a href="https://goo.gl/maps/z2x5kuWfkbw">在GOOGLE地圖上查看</a>',
+						<a target="_blank" href="https://goo.gl/maps/z2x5kuWfkbw">在GOOGLE地圖上查看</a>',
 				lat: 24.9645594,
 				long: 121.2360574
 				};
 			var j6 = {
 				info: '<strong>All-in Fitness</strong><br>\
 						320桃園市中壢區延平路372號B1號<br>\
-						<a href="https://goo.gl/maps/BKBsUczkQNp">在GOOGLE地圖上查看</a>',
+						<a target="_blank" href="https://goo.gl/maps/BKBsUczkQNp">在GOOGLE地圖上查看</a>',
 				lat: 24.959422,
 				long: 121.2247574
 				};
@@ -656,6 +666,176 @@
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
+        	}
+        	//Taoyuan
+        	else if(ShowValue() == "Taoyuan"){
+			var j1 = {
+				info: '<strong>Hypercorefitness超核心健身中心</strong><br>\
+						26 號, 藝文一街桃園區桃園市330<br>\
+						<a target="_blank" href="https://goo.gl/maps/ejzdgovctX42">在GOOGLE地圖上查看</a>',
+				lat: 25.013769,
+				long: 121.301748
+				};
+			var j2 = {
+				info: '<strong>桃園有家健身中心</strong><br>\
+						33060桃園市桃園區中平路102號B1號 宏昌六街210號<br>\
+						<a target="_blank" href="https://goo.gl/maps/gKyh2boW7Ym">在GOOGLE地圖上查看</a>',
+				lat: 24.9873949,
+				long: 121.2926247
+				};		
+			var j3 = {
+				info: '<strong>World Gym世界健身俱樂部桃園復興店</strong><br>\
+						330桃園市桃園區復興路186號<br>\
+						<a target="_blank" href="https://goo.gl/maps/2QxhWjQ7nfL2">在GOOGLE地圖上查看</a>',
+				lat: 24.990213,
+				long: 121.3114442
+				};
+			var j4 = {
+				info: '<strong>一起動EZDon健身學院–桃園店</strong><br>\
+						330桃園市桃園區中山路690-1號<br>\
+						<a target="_blank" href="https://goo.gl/maps/7bZzR27BBHS2">在GOOGLE地圖上查看</a>',
+				lat: 24.9912321	,
+				long: 121.2942396
+				};
+			var j5 = {
+				info: '<strong>World Gym世界健身俱樂部 桃園大有店</strong><br>\
+						330桃園市桃園區大有路630號<br>\
+						<a target="_blank" href="https://goo.gl/maps/eadeoYvKK8D2">在GOOGLE地圖上查看</a>',
+				lat: 25.015499,
+				long: 121.3169542
+				};
+			var j6 = {
+				info: '<strong>激活體能中心</strong><br>\
+						330桃園市桃園區中埔二街180號<br>\
+						<a target="_blank" href="https://goo.gl/maps/pXcJpJNByHS2">在GOOGLE地圖上查看</a>',
+				lat: 25.012979,
+				long: 121.2953722
+				};
+			var j7 = {
+				info: '<strong>World Gym世界健身俱樂部 桃園國強店 Sport</strong><br>\
+						33072桃園市桃園區國強一街136號<br>\
+						<a target="_blank" href="https://goo.gl/maps/rTdKhxBam4r">在GOOGLE地圖上查看</a>',
+				lat: 24.9932331,
+				long: 121.2863159
+				};
+			var j8 = {
+				info: '<strong>極限健身中心-桃園店</strong><br>\
+						330桃園市桃園區中山東路51號<br>\
+						<a target="_blank" href="https://goo.gl/maps/dp7Tkqhmj6t">在GOOGLE地圖上查看</a>',
+				lat: 24.996033,
+				long: 121.3145474
+				};
+			var j9 = {
+				info: '<strong>Hybrid Barbell 原力體能空間</strong><br>\
+						No, No. 99同德六街桃園區桃園市330<br>\
+						<a target="_blank" href="https://goo.gl/maps/ngNbGocnEtq">在GOOGLE地圖上查看</a>',
+				lat: 25.0161212,
+				long: 121.2990245
+				};
+			var j10 = {
+				info: '<strong>健身工廠 Fitness Factory 大有廠</strong><br>\
+						330桃園市桃園區民光東路81號<br>\
+						<a target="_blank" href="https://goo.gl/maps/ejCySYL3ptv">在GOOGLE地圖上查看</a>',
+				lat: 25.0082507,
+				long: 121.319355
+				};	
+			var j11 = {
+				info: '<strong>一起動運動事業有限公司桃園店</strong><br>\
+						330桃園市桃園區中山路690-1號<br>\
+						<a target="_blank" href="https://goo.gl/maps/DNG2Lm5gsAM2">在GOOGLE地圖上查看</a>',
+				lat: 24.9911497,
+				long: 121.2942331
+				};	
+			var j12 = {
+				info: '<strong>Hybrid Barbell Curves可爾姿桃園國際店</strong><br>\
+						330桃園市桃園區國際路一段1169號<br>\
+						<a target="_blank" href="https://goo.gl/maps/sDuzJhKgmEH2">在GOOGLE地圖上查看</a>',
+				lat: 24.98877,
+				long: 121.2887362
+				};
+			var j13 = {
+				info: '<strong>X-LINE 15</strong><br>\
+						330桃園市桃園區同安街520號<br>\
+						<a target="_blank" href="https://goo.gl/maps/KiDbhDzpnS52">在GOOGLE地圖上查看</a>',
+				lat: 25.021221,
+				long: 121.2998426
+				};	
+			var j14 = {
+				info: '<strong>TRUE YOGA FITNESS桃園會館</strong><br>\
+						330桃園市桃園區同德五街77號5樓<br>\
+						<a target="_blank" href="https://goo.gl/maps/UFo4EMMwwuH2">在GOOGLE地圖上查看</a>',
+				lat: 25.0142668,
+				long: 121.3000649
+				};	
+			var j15 = {
+				info: '<strong>Curves可爾姿桃園站前店</strong><br>\
+						33065桃園市桃園區中華路10號5樓之5<br>\
+						<a target="_blank" href="https://goo.gl/maps/DzEe8rRGFG22">在GOOGLE地圖上查看</a>',
+				lat: 24.991327,
+				long: 121.3115732
+				};	
+			var j16 = {
+				info: '<strong>Curves女性30分鐘環狀運動</strong><br>\
+						號 6 樓, No. 1125中正路桃園區桃園市330<br>\
+						<a target="_blank" href="https://goo.gl/maps/4qSpKissPjo">在GOOGLE地圖上查看</a>',
+				lat: 25.0135569,
+				long: 121.3182227
+				};	
+			var j17 = {
+				info: '<strong>活力運動教室</strong><br>\
+						330桃園市桃園區國豐三街15號<br>\
+						<a target="_blank" href="https://goo.gl/maps/VxLBxWN1QaE2">在GOOGLE地圖上查看</a>',
+				lat: 24.9881933,
+				long: 121.2797114
+				};	
+			var j18 = {
+				info: '<strong>CrossFit QILIN 麒麟</strong><br>\
+						338桃園市蘆竹區蘆竹鄉蘆興南路487號<br>\
+						<a target="_blank" href="https://goo.gl/maps/Ur1Ms16kvxs">在GOOGLE地圖上查看</a>',
+				lat: 25.034933,
+				long: 121.2840872
+				};
+			var j19 = {
+				info: '<strong>摩納哥健身會館</strong><br>\
+						330桃園市桃園區大興西路一段270號<br>\
+						<a target="_blank" href="https://goo.gl/maps/Lug5BhpdgMz">在GOOGLE地圖上查看</a>',
+				lat: 25.0126948,
+				long: 121.3003931
+				};	
+			var locations = [
+      			[j1.info, j1.lat, j1.long, 0],
+      			[j2.info, j2.lat, j2.long, 1],
+      			[j3.info, j3.lat, j3.long, 2],
+      			[j4.info, j4.lat, j4.long, 3],
+      			[j5.info, j5.lat, j5.long, 4],
+      			[j6.info, j6.lat, j6.long, 5],
+      			[j7.info, j7.lat, j7.long, 5],
+      			[j8.info, j8.lat, j8.long, 5],
+      			[j9.info, j9.lat, j9.long, 5],
+      			[j10.info, j10.lat, j10.long, 5],
+      			[j11.info, j11.lat, j11.long, 5],
+      			[j12.info, j12.lat, j12.long, 5],
+      			[j13.info, j13.lat, j13.long, 5],
+      			[j14.info, j14.lat, j14.long, 5],
+      			[j15.info, j15.lat, j15.long, 5],
+      			[j16.info, j16.lat, j16.long, 5],
+      			[j17.info, j17.lat, j17.long, 5],
+      			[j18.info, j18.lat, j18.long, 5],
+      			[j19.info, j19.lat, j19.long, 5],
+    		];
+
+			var map1 = new google.maps.Map(document.getElementById('map'), {
+          		center: {lat: 24.9891959, lng: 121.3133347},
+          		zoom: 13,
+          		mapTypeId: google.maps.MapTypeId.ROADMAP
+        	});
+        	}
+        	else{
+
+        	}
+
+
+
 
         	var infowindow = new google.maps.InfoWindow({});
 
