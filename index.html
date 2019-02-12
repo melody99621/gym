@@ -571,13 +571,13 @@
 					<!--Wrapper for sliders-->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<a target="_blank" href="https://melody99621.github.io/band/"><img src="images/band.jpg" style="width:100%;"></a>
+							<a target="_blank" href="https://melody99621.github.io/band/"><img src="images/band.jpeg" style="width:100%;"></a>
 						</div>
 						<div class="item">
-							<a target="_blank" href="https://melody99621.github.io/company/"><img src="images/company.jpg" style="width:100%;"></a>
+							<a target="_blank" href="https://melody99621.github.io/company/"><img src="images/company.jpeg" style="width:100%;"></a>
 						</div>
 						<div class="item">
-							<a target="_blank" href="https://melody99621.github.io/color-games/"><img src="images/color games.jpg" style="width:100%;"></a>
+							<a target="_blank" href="https://melody99621.github.io/color-games/"><img src="images/color games.jpeg" style="width:100%;"></a>
 						</div>
 					</div>
 					<!--Left and Right controls-->
@@ -602,15 +602,22 @@
 
 	<script type="text/javascript">
 		function initMap() {
+			var j1 = {
+				info: '<strong>中壢有家健身教室</strong><br>\
+					<br> 320桃園市中壢區中山東路三段327號<br>\
+					<a href="https://goo.gl/maps/z2x5kuWfkbw</a>',
+				lat: 24.9569459,
+				long: 121.231689
+				};
 
 			var locations = [
-      			["中壢有家健身教室", 24.948595, 121.2354664,4],
-      			["一起動EZDon健身學院-中壢店",24.9526974, 121.2220724, 5],
-      			['World Gym世界健身俱樂部', 24.9625973, 121.2268761, 3],
-      			['TRUE FITNESS', 24.959728, 121.223904, 2],
-      			['O-FIT原素運動空間', 24.968401, 121.230413, 1],
-      			['極限健身中心', 24.962578, 121.232380, 6],
-      			['健身工廠', 24.964572, 121.2295313, 7]
+      			[j1.info, j1.lat, j1.long,0],
+      			["一起動EZDon健身學院-中壢店",24.9526974, 121.2220724, 1],
+      			['World Gym世界健身俱樂部', 24.9625973, 121.2268761, 2],
+      			['TRUE FITNESS', 24.959728, 121.223904, 3],
+      			['O-FIT原素運動空間', 24.968401, 121.230413, 4],
+      			['極限健身中心', 24.962578, 121.232380, 5],
+      			['健身工廠', 24.964572, 121.2295313, 6]
     		];
 
 			var map1 = new google.maps.Map(document.getElementById('map'), {
