@@ -657,41 +657,6 @@
 				lat: 24.959422,
 				long: 121.2247574
 				};
-			 locations = [
-      			[j1.info, j1.lat, j1.long, 0],
-      			[j2.info, j2.lat, j2.long, 1],
-      			[j3.info, j3.lat, j3.long, 2],
-      			[j4.info, j4.lat, j4.long, 3],
-      			[j5.info, j5.lat, j5.long, 4],
-      			[j6.info, j6.lat, j6.long, 5],
-    		];
-
-			 map1 = new google.maps.Map(document.getElementById('Zhongli1'), {
-          		center: {lat: 24.9543421, lng: 121.2213471},
-          		zoom: 13,
-          		mapTypeId: google.maps.MapTypeId.ROADMAP
-        	});
-			var infowindow = new google.maps.InfoWindow();
-
-    		var marker,i;
-
-			for (i = 0; i < locations.length; i++) {  
-      			marker = new google.maps.Marker({
-        		position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        		map: map1
-      			});
-
-      			google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          				infowindow.setContent(locations[i][0]);
-          				infowindow.open(map, marker);
-        			}
-      			})
-      			(marker, i));
-			} 
-        	
-
-        	//Taoyuan
 			var t1 = {
 				info: '<strong>Hypercorefitness超核心健身中心</strong><br>\
 						26 號, 藝文一街桃園區桃園市330<br>\
@@ -824,35 +789,75 @@
 						<a target="_blank" href="https://goo.gl/maps/Lug5BhpdgMz">在GOOGLE地圖上查看</a>',
 				lat: 25.0126948,
 				long: 121.3003931
-				};	
-			 Tlocations = [
-      			[t1.info, t1.lat, t1.long, 0],
-      			[t2.info, t2.lat, t2.long, 1],
-      			[t3.info, t3.lat, t3.long, 2],
-      			[t4.info, t4.lat, t4.long, 3],
-      			[t5.info, t5.lat, t5.long, 4],
-      			[t6.info, t6.lat, t6.long, 5],
-      			[t7.info, t7.lat, t7.long, 5],
-      			[t8.info, t8.lat, t8.long, 5],
-      			[t9.info, t9.lat, t9.long, 5],
-      			[t10.info, t10.lat, t10.long, 5],
-      			[t11.info, t11.lat, t11.long, 5],
-      			[t12.info, t12.lat, t12.long, 5],
-      			[t13.info, t13.lat, t13.long, 5],
-      			[t14.info, t14.lat, t14.long, 5],
-      			[t15.info, t15.lat, t15.long, 5],
-      			[t16.info, t16.lat, t16.long, 5],
-      			[t17.info, t17.lat, t17.long, 5],
-      			[t18.info, t18.lat, t18.long, 5],
-      			[t19.info, t19.lat, t19.long, 5],
+				};
+
+			 locations = [
+      			[j1.info, j1.lat, j1.long, 0],
+      			[j2.info, j2.lat, j2.long, 1],
+      			[j3.info, j3.lat, j3.long, 2],
+      			[j4.info, j4.lat, j4.long, 3],
+      			[j5.info, j5.lat, j5.long, 4],
+      			[j6.info, j6.lat, j6.long, 5],
+      			[t1.info, t1.lat, t1.long, 6],
+      			[t2.info, t2.lat, t2.long, 7],
+      			[t3.info, t3.lat, t3.long, 8],
+      			[t4.info, t4.lat, t4.long, 9],
+      			[t5.info, t5.lat, t5.long, 10],
+      			[t6.info, t6.lat, t6.long, 11],
+      			[t7.info, t7.lat, t7.long, 12],
+      			[t8.info, t8.lat, t8.long, 13],
+      			[t9.info, t9.lat, t9.long, 14],
+      			[t10.info, t10.lat, t10.long, 15],
+      			[t11.info, t11.lat, t11.long, 16],
+      			[t12.info, t12.lat, t12.long, 17],
+      			[t13.info, t13.lat, t13.long, 18],
+      			[t14.info, t14.lat, t14.long, 19],
+      			[t15.info, t15.lat, t15.long, 20],
+      			[t16.info, t16.lat, t16.long, 21],
+      			[t17.info, t17.lat, t17.long, 22],
+      			[t18.info, t18.lat, t18.long, 23],
+      			[t19.info, t19.lat, t19.long, 24],
     		];
 
-			 map1 = new google.maps.Map(document.getElementById('Taoyuan1'), {
-          		center: {lat: 24.9891959, lng: 121.3133347},
+			map1 = new google.maps.Map(document.getElementById('Zhongli1'), {
+          		center: {lat: 24.9543421, lng: 121.2213471},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
-			
+			map1 = new google.maps.Map(document.getElementById('Taoyuan1'), {
+          		center: {lat: 24.9891959, lng: 121.3133347},
+          		zoom: 13,
+          		mapTypeId: google.maps.MapTypeId.ROADMAP
+        	});        	
+			var infowindow = new google.maps.InfoWindow();
+
+    		var marker,i;
+
+    		if(document.getElementById('Zhongli1') = 'Zhongli1'){
+				for (i = 0; i < 6; i++) {  
+    	  			marker = new google.maps.Marker({
+        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        			map: map1
+      				});
+    	  	}
+    	  	else if(document.getElementById('Taoyuan1') = 'Taoyuan1'){
+				for (i = 6; i < 25; i++) {  
+    	  			marker = new google.maps.Marker({
+        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        			map: map1
+      				});
+    	  	}
+      			google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        			return function() {
+          				infowindow.setContent(locations[i][0]);
+          				infowindow.open(map, marker);
+        			}
+      			})
+      			(marker, i));
+			} 
+        	
+
+        	//Taoyuan
 
         	var infowindow = new google.maps.InfoWindow();
 
@@ -863,15 +868,8 @@
         		position: new google.maps.LatLng(Tlocations[i][1], Tlocations[i][2]),
         		map: map1
       			});
-
-      			google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          				infowindow.setContent(Tlocations[i][0]);
-          				infowindow.open(map, marker);
-        			}
-      			})
-      			(marker, i));
-			}	
+			}
+		}	
 
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6tbY00B0wxH8xP8gs7jaHT3XxuT6zm6o&callback=initMap"></script>
