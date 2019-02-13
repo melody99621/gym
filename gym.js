@@ -387,7 +387,8 @@ function initMap() {
 				lat: 25.0599308,
 				long: 121.199808
 				};
-			 locations = [
+			    
+			var locations = [
       			[j1.info, j1.lat, j1.long, 0],
       			[j2.info, j2.lat, j2.long, 1],
       			[j3.info, j3.lat, j3.long, 2],
@@ -493,20 +494,20 @@ function initMap() {
         	});
 			//add marker
 			var infowindow = new google.maps.InfoWindow({});
-    		var marker, i;
 
-				for (i = 0; i < locations.length; i++) {
-					marker = new google.maps.Marker({
-					position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-					map: map1
-				});
-    	  			
-    	  		google.maps.event.addListener(marker, 'click', (function (marker, i) {
-					return function () {
-					infowindow.setContent(locations[i][0]);
-					infowindow.open(map, marker);
-					}
-					})(marker, i));
-				}
-    	  		
-		}
+	var marker, i;
+
+	for (i = 0; i < locations.length; i++) {
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+			map: map1
+		});
+
+		google.maps.event.addListener(marker, 'click', (function (marker, i) {
+			return function () {
+				infowindow.setContent(locations[i][0]);
+				infowindow.open(map, marker);
+			}
+		})(marker, i));
+	}
+}
