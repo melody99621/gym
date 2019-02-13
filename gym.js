@@ -441,60 +441,60 @@ function initMap() {
     		];
 
     		//add center
-			map1 = new google.maps.Map(document.getElementById('Zhongli1'), {
+		var	map1 = new google.maps.Map(document.getElementById('Zhongli1'), {
           		center: {lat: 24.9543421, lng: 121.2213471},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
-			map2 = new google.maps.Map(document.getElementById('Pingzhen1'), {
+		var	map2 = new google.maps.Map(document.getElementById('Pingzhen1'), {
           		center: {lat: 24.9209837, lng: 121.1826318},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
-        	map3 = new google.maps.Map(document.getElementById('Longtan1'), {
+        var	map3 = new google.maps.Map(document.getElementById('Longtan1'), {
           		center: {lat: 24.8466919, lng: 121.173867},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
-        	map4 = new google.maps.Map(document.getElementById('Xinwu1'), {
+        var	map4 = new google.maps.Map(document.getElementById('Xinwu1'), {
           		center: {lat: 24.9785388, lng: 121.0438487},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});        	
-			map5 = new google.maps.Map(document.getElementById('Taoyuan1'), {
+		var	map5 = new google.maps.Map(document.getElementById('Taoyuan1'), {
           		center: {lat: 24.9891959, lng: 121.3133347},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
-        	map6 = new google.maps.Map(document.getElementById('Bade1'), {
+        var	map6 = new google.maps.Map(document.getElementById('Bade1'), {
           		center: {lat: 24.9480222, lng: 121.2566844},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
-        	map7 = new google.maps.Map(document.getElementById('Luzhu1'), {
+        var	map7 = new google.maps.Map(document.getElementById('Luzhu1'), {
           		center: {lat: 25.0544869, lng: 121.2586267},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
-        	map8 = new google.maps.Map(document.getElementById('Guishan1'), {
+        var	map8 = new google.maps.Map(document.getElementById('Guishan1'), {
           		center: {lat: 25.0214484, lng: 121.3178532},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	}); 
-        	map9 = new google.maps.Map(document.getElementById('Yangmei1'), {
+        var	map9 = new google.maps.Map(document.getElementById('Yangmei1'), {
           		center: {lat: 24.9142094, lng: 121.1442459},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	}); 
-        	map10 = new google.maps.Map(document.getElementById('Dayuan1'), {
+        var	map10 = new google.maps.Map(document.getElementById('Dayuan1'), {
           		center: {lat: 25.0622409, lng: 121.1775919},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
-        	});      	
-			var infowindow = new google.maps.InfoWindow({});
-
+        	});
 			//add marker
-    		var marker,i;
+			var infowindow = new google.maps.InfoWindow({});
+    		var	marker,i;
+    		
 				for (i = 0; i < locations.length; i++) {  
     	  			marker = new google.maps.Marker({
         			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
@@ -508,121 +508,5 @@ function initMap() {
         				}
       				})(marker, i));
     	  		}
-    	  		for (i = 0; i < locations.length; i++) {  
-    	  			marker = new google.maps.Marker({
-        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        			map: map2
-      				});
-    	  			
-    	  		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          			infowindow.setContent(locations[i][0]);
-          			infowindow.open(map, marker);
-        				}
-      				})(marker, i));
-    	  		}
-    	  		for (i = 0; i < locations.length; i++) {  
-    	  			marker = new google.maps.Marker({
-        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        			map: map3
-      				});
-    	  			
-    	  		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          			infowindow.setContent(locations[i][0]);
-          			infowindow.open(map, marker);
-        				}
-      				})(marker, i));
-    	  		}
-    	  		for (i = 0; i < locations.length; i++) {  
-    	  			marker = new google.maps.Marker({
-        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        			map: map4
-      				});
-    	  			
-    	  		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          			infowindow.setContent(locations[i][0]);
-          			infowindow.open(map, marker);
-        				}
-      				})(marker, i));
-    	  		}
-    	  		for (i = 0; i < locations.length; i++) {  
-    	  			marker = new google.maps.Marker({
-        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        			map: map5
-      				});
-    	  			
-    	  		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          			infowindow.setContent(locations[i][0]);
-          			infowindow.open(map, marker);
-        				}
-      				})(marker, i));
-    	  		}
-    	  		for (i = 0; i < locations.length; i++) {  
-    	  			marker = new google.maps.Marker({
-        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        			map: map6
-      				});
-    	  			
-    	  		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          			infowindow.setContent(locations[i][0]);
-          			infowindow.open(map, marker);
-        				}
-      				})(marker, i));
-    	  		}
-    	  		for (i = 0; i < locations.length; i++) {  
-    	  			marker = new google.maps.Marker({
-        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        			map: map7
-      				});
-    	  			
-    	  		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          			infowindow.setContent(locations[i][0]);
-          			infowindow.open(map, marker);
-        				}
-      				})(marker, i));
-    	  		}
-    	  		for (i = 0; i < locations.length; i++) {  
-    	  			marker = new google.maps.Marker({
-        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        			map: map8
-      				});
-    	  			
-    	  		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          			infowindow.setContent(locations[i][0]);
-          			infowindow.open(map, marker);
-        				}
-      				})(marker, i));
-    	  		}
-    	  		for (i = 0; i < locations.length; i++) {  
-    	  			marker = new google.maps.Marker({
-        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        			map: map9
-      				});
-
-    	  		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          			infowindow.setContent(locations[i][0]);
-          			infowindow.open(map, marker);
-        				}
-      				})(marker, i));
-    	  		}
-    	  		for (i = 0; i < locations.length; i++) {  
-    	  			marker = new google.maps.Marker({
-        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        			map: map10
-      				});
     	  		
-      			google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          			infowindow.setContent(locations[i][0]);
-          			infowindow.open(map, marker);
-        				}
-      				})(marker, i));
-      			}
 		}
