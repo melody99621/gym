@@ -833,20 +833,22 @@
 
     		var marker,i;
 
-    		if(document.getElementById('Zhongli1') = 'Zhongli1'){
+    		if(document.getElementById('Zhongli1') == 'Zhongli1'){
 				for (i = 0; i < 6; i++) {  
     	  			marker = new google.maps.Marker({
         			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         			map: map1
       				});
+    	  		}
     	  	}
-    	  	else if(document.getElementById('Taoyuan1') = 'Taoyuan1'){
+    	  	else if(document.getElementById('Taoyuan1') == 'Taoyuan1'){
 				for (i = 6; i < 25; i++) {  
     	  			marker = new google.maps.Marker({
         			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         			map: map1
       				});
-    	  	}
+    	  		}
+	    	}
       			google.maps.event.addListener(marker, 'click', (function(marker, i) {
         			return function() {
           				infowindow.setContent(locations[i][0]);
@@ -854,22 +856,9 @@
         			}
       			})
       			(marker, i));
-			} 
+		} 
         	
 
-        	//Taoyuan
-
-        	var infowindow = new google.maps.InfoWindow();
-
-    		var marker,i;
-
-    		for (i = 0; i < Tlocations.length; i++) {  
-      			marker = new google.maps.Marker({
-        		position: new google.maps.LatLng(Tlocations[i][1], Tlocations[i][2]),
-        		map: map1
-      			});
-			}
-		}	
 
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6tbY00B0wxH8xP8gs7jaHT3XxuT6zm6o&callback=initMap"></script>
