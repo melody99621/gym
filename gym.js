@@ -1,5 +1,4 @@
-function initMap() {
-				
+function initMap() {			
 			//Zhongli
 			var j1 = {
 				info: '<strong>極限健身中心</strong><br>\
@@ -247,8 +246,8 @@ function initMap() {
 				info: '<strong>漢特健身工作室</strong><br>\
 						327桃園市新屋區大智街32號<br>\
 						<a target="_blank" href="https://goo.gl/maps/cXPCZxQB2fm">在GOOGLE地圖上查看</a>',
-				lat: 24.9703201,
-				long: 121.1069099
+				lat: 24.9703354,
+				long: 121.1068048
 				};
 			//Bade
 			var b1 = {
@@ -483,7 +482,7 @@ function initMap() {
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	}); 
         	map9 = new google.maps.Map(document.getElementById('Yangmei1'), {
-          		center: {lat: 24.9156162, lng: 121.0882802},
+          		center: {lat: 24.9142094, lng: 121.1442459},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	}); 
@@ -492,7 +491,7 @@ function initMap() {
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});      	
-			var infowindow = new google.maps.InfoWindow();
+			var infowindow = new google.maps.InfoWindow({});
 
 			//add marker
     		var marker,i;
