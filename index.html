@@ -825,13 +825,14 @@
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
-			map1 = new google.maps.Map(document.getElementById('Taoyuan1'), {
+			map2 = new google.maps.Map(document.getElementById('Taoyuan1'), {
           		center: {lat: 24.9891959, lng: 121.3133347},
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});        	
 			var infowindow = new google.maps.InfoWindow();
 
+			//add marker
     		var marker,i;
 				for (i = 0; i < locations.length; i++) {  
     	  			marker = new google.maps.Marker({
@@ -839,17 +840,20 @@
         			map: map1
       				});
     	  		}
+    	  		for (i = 0; i < locations.length; i++) {  
+    	  			marker = new google.maps.Marker({
+        			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        			map: map2
+      				});
+    	  		}
 
-      			google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        			return function() {
-          				infowindow.setContent(locations[i][0]);
-          				infowindow.open(map, marker);
+      		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        		return function() {
+          		infowindow.setContent(locations[i][0]);
+          		infowindow.open(map, marker);
         			}
-      			})
-      			(marker, i));
-		} 
-        	
-
+      			})(marker, i));
+		}         	
 
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6tbY00B0wxH8xP8gs7jaHT3XxuT6zm6o&callback=initMap"></script>
