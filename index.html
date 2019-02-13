@@ -611,6 +611,7 @@
 	</footer>
 
 	<script type="text/javascript">
+		
 		function initMap() {
 				
 			//Zhongli
@@ -684,6 +685,8 @@
       			})
       			(marker, i));
 			} 
+        	
+
         	//Taoyuan
 			var t1 = {
 				info: '<strong>Hypercorefitness超核心健身中心</strong><br>\
@@ -851,7 +854,7 @@
 
     		var marker,i;
 
-    		for (i = 0; i < locations.length; i++) {  
+    		for (i = 0; i < Tlocations.length; i++) {  
       			marker = new google.maps.Marker({
         		position: new google.maps.LatLng(Tlocations[i][1], Tlocations[i][2]),
         		map: map1
@@ -859,7 +862,7 @@
 
       			google.maps.event.addListener(marker, 'click', (function(marker, i) {
         			return function() {
-          				infowindow.setContent(locations[i][0]);
+          				infowindow.setContent(Tlocations[i][0]);
           				infowindow.open(map, marker);
         			}
       			})
