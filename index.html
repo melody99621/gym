@@ -671,6 +671,10 @@
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
+			var infowindow = new google.maps.InfoWindow();
+
+    		var marker,i;
+
 			for (i = 0; i < locations.length; i++) {  
       			marker = new google.maps.Marker({
         		position: new google.maps.LatLng(locations[i][1], locations[i][2]),
@@ -848,9 +852,9 @@
           		zoom: 13,
           		mapTypeId: google.maps.MapTypeId.ROADMAP
         	});
-			}
+			
 
-        	var infowindow = new google.maps.InfoWindow({});
+        	var infowindow = new google.maps.InfoWindow();
 
     		var marker,i;
 
