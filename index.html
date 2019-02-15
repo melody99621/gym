@@ -9,11 +9,13 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 	<!--navbar-->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top ">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"data-target="#myNavbar">
 				<span class="icon-bar"></span>
@@ -24,26 +26,26 @@
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li><a href="#gym story">GYM STORY</a></li>
-				<li><a href="#important section">健身的重要性</a></li>
-				<li><a href="#gym location">熱門健身地點</a></li>
-				<li><a href="#gym coach">師父領進門</a></li>
-				<li><a href="#gym summary">重點分析</a></li>
+				<li><a href="#gymstory">GYM STORY</a></li>
+				<li><a href="#importantsection">健身的重要性</a></li>
+				<li><a href="#gymlocation">熱門健身地點</a></li>
+				<li><a href="#gymcoach">師父領進門</a></li>
+				<li><a href="#gymsummary">重點分析</a></li>
 				<li><a href="#aboutme">關於我</a></li>
 			</ul>
 		</div>
 	</nav>
 	<!--heading-->
-	<div class="jumbotron text-center" id="home">
+	<div class="jumbotron text-center">
 		<h1 style="color: white;">桃園市健身房落點</h1>
 	<!--nav2-->
-		<div class= "title-heading container text-center">
+		<div class= "title-heading container text-center nav2show">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="row">
 						<div class="col-md-2 col-sm-6">
-							<div class="item">
-								<a class="btn" href="#gym story">
+							<div class="item item-1">
+								<a class="btn" href="#gymstory">
 								<span class="fa-1 fa-5x">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fas fa-dumbbell"></i>
@@ -54,7 +56,7 @@
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-6">
-							<div class="item">
+							<div class="item item-2">
 								<a class="btn" href="#important section">
 								<span class="fa-2 fa-5x">
 									<i class="fa fa-circle fa-stack-2x"></i>
@@ -66,8 +68,8 @@
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-6">
-							<div class="item">
-								<a class="btn" href="#gym location">
+							<div class="item item-3">
+								<a class="btn" href="#gymlocation">
 								<span class="fa-3 fa-5x">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fas fa-map-marker-alt"></i>
@@ -78,8 +80,8 @@
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-6">
-							<div class="item">
-								<a class="btn" href="#gym coach">
+							<div class="item item-4">
+								<a class="btn" href="#gymcoach">
 								<span class="fa-4 fa-5x">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fas fa-user"></i>
@@ -90,8 +92,8 @@
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-6">
-							<div class="item">
-								<a class="btn" href="#gym summary">
+							<div class="item item-5">
+								<a class="btn" href="#gymsummary">
 								<span class="fa-5 fa-5x">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fas fa-thumbs-up"></i>
@@ -102,7 +104,7 @@
 							</div>
 						</div>
 						<div class="col-md-2 col-sm-6">
-							<div class="item">
+							<div class="item item-6">
 								<a class="btn" href="#aboutme">
 								<span class="fa-6 fa-5x">
 									<i class="fa fa-circle fa-stack-2x"></i>
@@ -120,28 +122,28 @@
 	</div>
 	<img src="images/jog-grass-night.png" class="img">
 	<!--gym story-->
-	<div class="section storysection" id="gym story">
+	<div class="section storysection" id="gymstory">
 		<div class="container">
-			<div class="sectionheading">
+			<div class="sectionheading" data-aos="fade-up">
 					<div class="col-md-12">
 						<h3 class="text-center">GYM STORY</h3>
 					</div>				
 			</div>
 		<div class="row">
 			<div class="row">
-				<div class="col-md-6">
-					<img src="images/gym.jpg" width="525px" class="img-shadow img-radius">
+				<div class="col-md-6 col-xd-12" data-aos="flip-left">
+					<img src="images/gym.jpg" style="max-width: 100%;" class="img-shadow img-radius">
 				</div>
-				<div class="col-md-6">
-					<h4 class="text-left">健身-邁向健康的第一步</h4>
-					<p  class="text-left">健身泛指所有通過運動方式<br><br>來達到維持與發展適當體能、增進身體健康的身體活動它的目標有許多種包括：<br>增強肌肉與循環系統、增進運動技能與身體體能、減重或維持體重或是單純的休閒等等<br><br>規律而定時的進行體能訓練，有助於活化身體的免疫系統、預防或改善一些文明病
+				<div class="col-md-6 col-xd-12 reverse1" data-aos="flip-right">
+					<h4>健身-邁向健康的第一步</h4>
+					<p>健身泛指所有通過運動方式<br><br>來達到維持與發展適當體能、增進身體健康的身體活動它的目標有許多種包括：<br>增強肌肉與循環系統、增進運動技能與身體體能、減重或維持體重或是單純的休閒等等<br><br>規律而定時的進行體能訓練，有助於活化身體的免疫系統、預防或改善一些文明病
 					</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
-					<h4 style="max-width:525px;" class="text-right">健身該注意?</h4>
-					<p style="max-width:495px;" class="text-right">
+				<div class="col-md-6 col-xd-12 reverse2" data-aos="flip-left">
+					<h4>健身該注意?</h4>
+					<p>
 					1.先學好技巧才加重<br>
 					2.同一組動作不要做太多組<br>
 					3.不要只練上身忽視下身<br>
@@ -149,15 +151,15 @@
 					5.不是要戒掉所有蛋白質跟碳水化合物
 					</p>
 				</div>
-				<div class="col-md-6">
-					<img src="images/gym2.jpg" width="525px" class="img-shadow img-radius">
+				<div class="col-md-6 col-xd-12 reverse3" data-aos="flip-right">
+					<img src="images/gym2.jpg"  style="max-width: 100%;" class="img-shadow img-radius">
 				</div>
 			</div>
 		</div>
 		</div>
 	</div>
 	<!--important section-->
-	<div class="importantsection" id="important section">
+	<div class="importantsection" id="importantsection" data-aos="fade-up">
 		<div class="container">
 			<div class="sectionheading">
 				<div class="col-md-12">
@@ -167,7 +169,7 @@
 			</div>
 	<!--議題一-->
 			<div class="row">
-				<div class="col-md-12 text-center">
+				<div class="col-md-12 text-center" data-aos="fade-up">
 					<h3><span><i class="fa fa-caret-down fa-1x"></i></span>
 					議題一:BMI與健康的關係</h3>
 				</div>
@@ -177,8 +179,8 @@
 					<p></p>
 				</div>
 				<div class="col-md-8 air-info-0">
-					<h4 class="text-center">BMI範圍</h4>
-					<table style="width:80%">
+					<h4 class="text-center" data-aos="fade-up">BMI範圍</h4>
+					<table style="max-width:80%" data-aos="zoom-in">
   						<tr>
     						<th>分級</th>
     						<th>BMI指數</th>
@@ -213,20 +215,20 @@
 				<div class="col-md-2">
 					<p></p>
 				</div>
-				<div class="col-md-4 air-info-0">
+				<div class="col-md-4 air-info-0" data-aos="zoom-in-right">
 					<h4 class="text-center">全世界BMI值與死亡率關係</h4>
-					<img src="images/BMI.png" width="100%">
+					<img src="images/BMI.png" style="max-width:100%">
 					<p class="frame-p text-center">在正常範圍下死亡率較低</p>
 				</div>
-				<div class="col-md-4 air-info-0">
+				<div class="col-md-4 air-info-0" data-aos="zoom-in-left">
 					<h4 class="text-center">東亞BMI值與死亡率關係</h4>
-					<img src="images/BMI2.png" width="100%">
+					<img src="images/BMI2.png" style="max-width:100%">
 					<p class="frame-p text-center">在正常範圍下死亡率較低</p>
 				</div>
 			</div>
 	<!--議題二-->
 			<div class="row">
-				<div class="col-md-12 text-center">
+				<div class="col-md-12 text-center" data-aos="fade-up">
 					<h3><span><i class="fa fa-caret-down fa-1x"></i></span>
 					議題二:你算是正常身材嗎</h3>
 					<p>現在我知道了不好的身材會導致身體不健康，但是怎樣才算是正常身材呢?</p>
@@ -236,9 +238,9 @@
 					<div class="col-md-2">
 						<p></p>
 					</div>
-					<div class="col-md-8 air-info-0">
+					<div class="col-md-8 air-info-0" data-aos="zoom-in">
 						<h4 class="text-center">體脂肪範圍</h4>
-							<table style="width:80%">
+							<table style="max-width:80%">
   							<tr>
     							<th colspan="3" class="text-center">身體脂肪率分類表</th>
   							</tr>
@@ -279,40 +281,38 @@
 			<div class="col-md-2">
 					<p></p>
 			</div>
-			<div class="col-md-4 air-info-0">
+			<div class="col-md-4 air-info-0" data-aos="zoom-in-right">
 				<h4 class="text-center">林書豪</h4>
-				<img src="images/thin.jpg" width="100%">
+				<img src="images/thin.jpg"  style="width: 100%">
 				<p class="frame-p text-center">BMI:24.68</p>
 			</div>
-			<div class="col-md-4 air-info-0">
+			<div class="col-md-4 air-info-0" data-aos="zoom-in-left">
 				<h4 class="text-center">連勝文</h4>
-				<img src="images/fat.jpg" width="100%">
+				<img src="images/fat.jpg" style="width: 100%">
 				<p class="frame-p text-center">BMI:24.95</p>
 			</div>
 			<div class="col-md-2">
 					<p></p>
 			</div>
-			<div class="col-md-8 air-info-0 text-center">
+			<div class="col-md-8 air-info-0 text-center" data-aos="zoom-in">
 				<p>以上兩位BMI差不多但是可明顯看出身型的差距，這就是體脂肪的關係，即便你BMI不在安全值，整個的身體結構依然非常健康，只要脂肪含量低，就能遠離罹患三高病變之風險外，另外便是減去了體脂肪，身體的肌肉量增加，基礎代謝率也會跟著提高，知道健身好處後還不趕緊來做看看</p>
-				<img src="images/good.jpeg">
+				<img src="images/good.jpeg" style="width: 100%">
 			</div>
 		</div>
 	</div>
 	<!--gym location-->
-	<div class="gym-locationheading text-center" id="gym location">
-		<div class="container">
-			<h2 style="color: white;">到底哪裡有健身房呢?</h2>
+	<div class="gym-location text-center" id="gymlocation">
+		<div class="gym-locationheading ">
+			<h2 style="color: white; padding: 30px ;" data-aos="zoom-in">到底哪裡有健身房呢?</h2>
 		</div>
-	</div>
-	<div class="gym-location text-center">
 		<div class="container">
-			<div class="row">
+			<div class="row" data-aos="fade-up">
 				<div class="col-md-12">
 					<h2>健身房熱點</h2>
 					<p>吸引時下桃園年輕人的健身房，究竟有什麼迷人之處呢?</p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" data-aos="flip-up">
 				<div class="col-md-12">
 					<ul class="nav nav-tabs nav-justified">
 						<li class="active"><a data-toggle="pill" href="#Zhongli">中壢區</a></li>
@@ -332,34 +332,34 @@
 				<div class="col-md-12 air-info-0">
 					<div class="tab-content">
 						<div id="Zhongli" class="tab-pane fade in active">
-							<div id="Zhongli1" style="width:100%;height:460px"></div>
+							<div id="Zhongli1" style="max-width:100%;height:460px"></div>
 						</div>
 						<div id="Pingzhen" class="tab-pane fade in">
-							<div id="Pingzhen1" style="width:100%;height:460px"></div>
+							<div id="Pingzhen1" style="max-width:100%;height:460px"></div>
 						</div>
 						<div id="Longtan" class="tab-pane fade in">
-							<div id="Longtan1" style="width:100%;height:460px"></div>
+							<div id="Longtan1" style="max-width:100%;height:460px"></div>
 						</div>
 						<div id="Xinwu" class="tab-pane fade in">
-							<div id="Xinwu1" style="width:100%;height:460px"></div>
+							<div id="Xinwu1" style="max-width:100%;height:460px"></div>
 						</div>
 						<div id="Taoyuan" class="tab-pane fade in">
-							<div id="Taoyuan1" style="width:100%;height:460px"></div>
+							<div id="Taoyuan1" style="max-width:100%;height:460px"></div>
 						</div>
 						<div id="Bade" class="tab-pane fade in">
-							<div id="Bade1" style="width:100%;height:460px"></div>
+							<div id="Bade1" style="max-width:100%;height:460px"></div>
 						</div>
 						<div id="Luzhu" class="tab-pane fade in">
-							<div id="Luzhu1" style="width:100%;height:460px"></div>
+							<div id="Luzhu1" style="max-width:100%;height:460px"></div>
 						</div>
 						<div id="Guishan" class="tab-pane fade in">
-							<div id="Guishan1" style="width:100%;height:460px"></div>
+							<div id="Guishan1" style="max-width:100%;height:460px"></div>
 						</div>
 						<div id="Yangmei" class="tab-pane fade in">
-							<div id="Yangmei1" style="width:100%;height:460px"></div>
+							<div id="Yangmei1" style="max-width:100%;height:460px"></div>
 						</div>
 						<div id="Dayuan" class="tab-pane fade in">
-							<div id="Dayuan1" style="width:100%;height:460px"></div>
+							<div id="Dayuan1" style="max-width:100%;height:460px"></div>
 						</div>
 					</div>					
 				</div>
@@ -367,7 +367,7 @@
 		</div>
 	</div>
 	<!--coach-->
-	<div class="gym-coach text-center" id="gym coach">
+	<div class="gym-coach text-center" id="gymcoach">
 		<div class="container text-center">
 			<div class="row">
 				<div class="col-md-12">
@@ -489,25 +489,25 @@
 		</div>
 	</div>
 	<!--summary-->
-	<div class="gym-summary text-center" id="gym summary">
+	<div class="gym-summary text-center" id="gymsummary">
 		<div class="container text-center">
 		<!--fat bat effect-->
 			<div class="row text-center">
-				<div class="col-md-12">
+				<div class="col-md-12" data-aos="fade-up">
 					<h2>重點分析</h2>
 					<h3 style="margin-bottom:30px;">1.健身為何這麼重要?</h3>
 				</div>
 				<div class="col-md-2">
 					<p></p>
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8" data-aos="zoom-in">
 					<p style="font-size: 18px;margin-bottom:10px;">體脂肪每增加5</p>
 					<ul id="skills">
                         <li>
                             <span>心血管疾病</span>
                             <span id="j">↑8%</span>
                             <div class="bar_container">
-								<span class="bar" data-bar='{ "color": "#f48b8b" }'style="background-color:steelblue; width: 60%;">
+								<span class="bar" data-bar='{ "color": "#f48b8b" }'style="background-color:steelblue; max-width: 60%;">
                             	</span>
                             </div>
                         </li>
@@ -515,7 +515,7 @@
                        		<span>痛風</span>
                             <span id="j">↑4%</span>
                             <div class="bar_container">
-								<span class="bar" data-bar='{ "color": "#f48b8b" }'style="background-color:steelblue; width: 80%;">
+								<span class="bar" data-bar='{ "color": "#f48b8b" }'style="background-color:steelblue; max-width: 80%;">
                             	</span>
                             </div>
                         </li>
@@ -523,7 +523,7 @@
                         	<span>糖尿病</span>
                             <span id="j">↑7%</span>
                             <div class="bar_container">
-								<span class="bar" data-bar='{ "color": "#f48b8b" }'style="background-color:steelblue; width: 40%;">
+								<span class="bar" data-bar='{ "color": "#f48b8b" }'style="background-color:steelblue; max-width: 40%;">
                             	</span>
                             </div>
                         </li>
@@ -531,7 +531,7 @@
                         	<span>預計壽命</span>
                             <span id="j">↓4y</span>
                             <div class="bar_container">
-								<span class="bar" data-bar='{ "color": "#f48b8b" }'style="background-color:steelblue; width: 20%;">
+								<span class="bar" data-bar='{ "color": "#f48b8b" }'style="background-color:steelblue; max-width: 20%;">
                             	</span>
                             </div>
                         </li>
@@ -539,32 +539,10 @@
 				</div>
 			</div>
 			<div class="row text-center">
-				<div class="col-md-12">
-					<h3>台灣健身房數量</h3>
-					<p>還不趕緊出門健身去~~</p>
-				<div class="square1">
-  					<div class="square2"></div>
-  					<div class="square3"></div>
-    				<div class="square4"></div>
-    				<div class="square5"></div>
-    				<div class="square6"></div>
-    				<div class="square7"></div>
-    				<div class="square8"></div>
-  					<div class="span1">100年</div>
-  					<div class="span2">101年</div>
-  					<div class="span3">102年</div>
-  					<div class="span4">103年</div>
-  					<div class="span5">104年</div>
-  					<div class="span6">105年</div>
-  					<div class="span7">106年</div>
-  					<div class="point1">131</div>
-  					<div class="point2">128</div>
-  					<div class="point3">149</div>
-  					<div class="point4">168</div>
-  					<div class="point5">225</div>
-  					<div class="point6">299</div>
-  					<div class="point7">369</div>
-  				</div>
+				<div class="col-md-12 text-center">
+					<h3 data-aos="fade-up">台灣健身房數量</h3>
+					<p data-aos="fade-up">還不趕緊出門健身去~~</p>
+				<div id="chart" style="height: 300px; max-width: 100%;" data-aos="zoom-in"></div>
   				</div>
   			</div>
   			<div class="row" style="margin-top: 30px;">
@@ -594,31 +572,31 @@
 				<h4 style="margin-bottom: 10px;">其他作品</h4>
 				<div class="thumbnail">
 					<!--heading-->
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<div id="myCarousel1" class="carousel slide" data-ride="carousel">
 					<!--indicator-->
 					<ol class="carousel-indicators">
-      					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      					<li data-target="#myCarousel" data-slide-to="1"></li>
-      					<li data-target="#myCarousel" data-slide-to="2"></li>
+      					<li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+      					<li data-target="#myCarousel1" data-slide-to="1"></li>
+      					<li data-target="#myCarousel1" data-slide-to="2"></li>
     				</ol>
 					<!--Wrapper for sliders-->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<a target="_blank" href="https://melody99621.github.io/band/"><img src="images/band.JPG" style="width:100%;"></a>
+							<a target="_blank" href="https://melody99621.github.io/band/"><img src="images/band.JPG" style="max-width:100%;"></a>
 						</div>
 						<div class="item">
-							<a target="_blank" href="https://melody99621.github.io/company/"><img src="images/company.JPG" style="width:100%;"></a>
+							<a target="_blank" href="https://melody99621.github.io/company/"><img src="images/company.JPG" style="max-width:100%;"></a>
 						</div>
 						<div class="item">
-							<a target="_blank" href="https://melody99621.github.io/color-games/"><img src="images/color games.JPG" style="width:100%;"></a>
+							<a target="_blank" href="https://melody99621.github.io/color-games/"><img src="images/color games.JPG" style="max-width:100%;"></a>
 						</div>
 					</div>
 					<!--Left and Right controls-->
-					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
       					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       					<span class="sr-only">Previous</span>
     				</a>
-    				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    				<a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
       					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       					<span class="sr-only">Next</span>
     				</a>
@@ -631,9 +609,129 @@
 	<footer class="text-center">
 		<h3 style=" color:  #eeeff1;">桃園健身動起來</h3>
 		<p style=" color:  #eeeff1;">運用資料，邁向健身。運用健身，邁向健康</p>
+		<a href="#myPage" class="fixed" data-aos="fade-up-left">
+			<img src="images/myPage.jpg">
+		</a>
 	</footer>
+	<!--logo-->
 
 	<script type="text/javascript" src="gym.js"></script>
+  	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>	
+	<script type="text/javascript">
+	window.onload = function () {
+    	var chart = new CanvasJS.Chart("chart", {
+
+    	axisY: {
+		title: "number"
+		},
+
+      	data: [{
+         	type: "column",
+         	dataPoints: [
+         	{ label: "2011", y: 131 },
+         	{ label: "2012", y: 128 },
+         	{ label: "2013", y: 149 },                                    
+         	{ label: "2014", y: 168 },
+         	{ label: "2015", y: 225 },
+         	{ label: "2016", y: 299 },
+         	{ label: "2017	", y: 369 }
+         	]
+       	}
+       	]
+     	});
+
+    	chart.render();
+ 	}
+	//scroll smooth
+	$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+
+	  $("a").on('click', function(event) {	
+
+	  if (this.hash !== "") {
+
+    	event.preventDefault();
+
+
+    	var hash = this.hash;
+
+
+    	$('html, body').animate({
+      	scrollTop: $(hash).offset().top
+    	}, 900, function(){
+
+      	window.location.hash = hash;
+      	});
+   	 }
+  	});
+	})
+	//animation
+	AOS.init({
+  				duration:1000,
+  	});
+	//header navbar
+	$(document).ready(function(){
+		//hidden
+		$(".navbar").hide();
+		//show
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 250){
+					$(".navbar").fadeIn();
+				}else{
+					$(".navbar").fadeOut();
+				}
+			});
+	});
+		$(".item-1").mouseenter(function() {
+       		$(".item").css("opacity","0.2");
+       		$(".item-1").css("opacity","1.0");
+       	});
+       	$(".item-1").mouseleave(function() {
+        	$(".item").css("opacity","1.0");
+        	$(".item").animate(150)
+        });
+        $(".item-2").mouseenter(function() {
+       		$(".item").css("opacity","0.2");
+       		$(".item-2").css("opacity","1.0");
+       	});
+       	$(".item-2").mouseleave(function() {
+        	$(".item").css("opacity","1.0");
+        	$(".item").animate(150)
+        });
+        $(".item-3").mouseenter(function() {
+       		$(".item").css("opacity","0.2");
+       		$(".item-3").css("opacity","1.0");
+       	});
+       	$(".item-3").mouseleave(function() {
+        	$(".item").css("opacity","1.0");
+        	$(".item").animate(150)
+        });
+        $(".item-4").mouseenter(function() {
+       		$(".item").css("opacity","0.2");
+       		$(".item-4").css("opacity","1.0");
+       	});
+       	$(".item-4").mouseleave(function() {
+        	$(".item").css("opacity","1.0");
+        	$(".item").animate(150)
+        });
+        $(".item-5").mouseenter(function() {
+       		$(".item").css("opacity","0.2");
+       		$(".item-5").css("opacity","1.0");
+       	});
+       	$(".item-5").mouseleave(function() {
+        	$(".item").css("opacity","1.0");
+        	$(".item").animate(150)
+        });
+        $(".item-6").mouseenter(function() {
+       		$(".item").css("opacity","0.2");
+       		$(".item-6").css("opacity","1.0");
+       	});
+       	$(".item-6").mouseleave(function() {
+        	$(".item").css("opacity","1.0");
+        	$(".item").animate(150)
+        });
+
+</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6tbY00B0wxH8xP8gs7jaHT3XxuT6zm6o&callback=initMap"></script>
 
 </body>
